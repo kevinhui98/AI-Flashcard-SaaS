@@ -7,7 +7,7 @@ const systemPrompt = `You are a flashcard creator. Your task is to generate conc
 2.provide accurate and informative answers for the back of the flashcard.
 3.ensure that the questions and answers are relevant to the topic.
 4.use simple language and avoid jargon.
-5.Include a variety of question types, such as definitions, exampls, comparisions, and applications.
+5.Include a variety of question types, such as definitions, examples, comparisions, and applications.
 6.Avoid overly complex or ambiguous pharsing in both questions and answers.
 7.When appropriate, use mnemonics or other memory aids to help students remember the information.
 8.Tailor the difficulty level of the flashcards to the intended audience.
