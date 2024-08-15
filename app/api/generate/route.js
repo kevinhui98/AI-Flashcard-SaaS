@@ -25,18 +25,18 @@ Return in the folowing JSON format
     ]
 }
 `
-export async function Postpone(req) {
+export async function POST(req) {
     const openai = new OpenAI(process.env.OPENAI_API_KEY)
     const data = await req.text()
-    const completion = await openai.complete({
+    const completion = await openai.chat.completions.create({
         messages: [
             { role: 'system', content: systemPrompt },
             { role: 'user', content: data },
         ],
-        model: "gpt-=4o",
+        model: "gpt-4o",
         response_format: { type: 'json_object' },
     })
 
-    const flashcards = JSON.parse(completion.data.choices[0].message.content)
+    const flashcards = JSON.parse(completion.choices[0].message.content)
     return NextResponse.json(flashcards.flashcards)
 }
