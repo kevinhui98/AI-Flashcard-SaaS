@@ -3,14 +3,14 @@ import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { Grid, Divider } from '@mui/material'
 import Head from 'next/head'
 import { Nav } from './components/nav'
-import { Foot } from './components/foot'
+import Contact from './components/foot'
 import Copyright from "./components/copyright";
 import Feature from "./components/feature";
 import Welcome from "./components/Welcome";
 import Price from "./components/price";
 export default function Home() {
   return (
-    <Grid fontFamily={'gotham'} bgcolor={'black'}>
+    <Grid color={'transparent'}>
       <Head>
         <title>
           Stock Starter
@@ -19,12 +19,11 @@ export default function Home() {
       </Head>
       <Nav />
       <Welcome />
-      <Divider variant="middle" />
       <Feature />
       <Divider variant="middle" />
       <Price />
       <Divider variant="middle" />
-      <Foot />
+      <Contact />
       <Copyright />
     </Grid>
   )

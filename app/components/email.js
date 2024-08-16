@@ -27,8 +27,8 @@ const Email = () => {
             <Typography variant='h4' letterSpacing={1.5} fontFamily={"Montserrat"}>Contact Us</Typography>
             <Typography variant='subtitle1' mb={2.5} color={'#c6c6c6'} fontFamily={"Montserrat"}>Send us a message</Typography>
             <form ref={form} onSubmit={sendEmail} bgcolor={'white'}>
-                <Stack direction={'column'} gap={2}>
-                    <Stack direction={'row'} gap={2}>
+                <Stack direction={'column'} gap={1}>
+                    <Stack direction={'row'} gap={1}>
                         <TextField label='Name' name='from_name' required variant="outlined" color="success" focused />
                         <TextField label='Email' name='user_email' required variant="outlined" color="success" focused />
                     </Stack>

@@ -1,17 +1,32 @@
-import React from 'react'
+'use client'
+import { React, useState, useEffect } from 'react'
 import { Box, Button, Typography } from '@mui/material'
 const Welcome = () => {
+    const [transitionClass, setTransitionClass] = useState({ transform: 'translateY(25%)' })
+    useEffect(() => {
+        setTimeout(() => {
+            setTransitionClass({
+                transform: 'translateY(-25%)',
+                transition: 'transform 2s ease-in-out'
+            })
+        }, 1000)
+    }
+        , [])
+
     return (
-        <Box height={'60vh'} pt={10}
+        <Box height={'80vh'} pt={20}
             sx={{
                 textAlign: 'center',
-                my: 4,
+                mb: 4,
+                background: 'linear-gradient(to bottom, green, white)',
             }}>
-            <Typography variant="h1" gutterBottom fontFamily={"Montserrat"} color={'white'}> Welcome to Stock Starter</Typography>
-            <Typography variant="h4" sx={{ color: '#c6c6c6' }} fontFamily={"Montserrat"} color={'white'}>
-                The easiest way to make flashcards from your text
-            </Typography>
-            <Button variant="contained" fontFamily={"Montserrat"} sx={{ mt: 2, "bgcolor": "#008000" }}>Get Started</Button>
+            <Box style={transitionClass}>
+                <Typography variant="h1" fontWeight={'bold'} fontFamily={"Anton"} color={'white'}> Welcome to Stock Starter</Typography>
+                <Typography variant="h4" fontWeight={'bold'} sx={{ color: 'white' }} fontFamily={"Montserrat"} mt={4} mb={8} >
+                    The easiest way to make flashcards for your stocks
+                </Typography>
+                <Button variant="contained" fontFamily={"Montserrat"} sx={{ mt: 2, "bgcolor": "#008000" }} size='large'>Get Started</Button>
+            </Box>
         </Box>
     )
 }
