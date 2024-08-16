@@ -23,4 +23,5 @@ const app = initializeApp(firebaseConfig);
 const analytics = isSupported().then(yes => yes ? getAnalytics(app) : null);
 const db = getFirestore(app); // Use getFirestore, not getFireBase
 
+
 export {db}
