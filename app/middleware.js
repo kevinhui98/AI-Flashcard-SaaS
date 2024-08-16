@@ -1,6 +1,17 @@
 import { clerkMiddleware } from "@clerk/nextjs/server";
 
-export default clerkMiddleware();
+export default function handler(req, res) {
+  try {
+    // Run the Clerk middleware
+    return clerkMiddleware()(req, res);
+  } catch (error) {
+    // Log the error for debugging
+    console.error("Error in middleware:", error);
+
+    // Return a 500 status code with an error message
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+}
 
 export const config = {
   matcher: [
