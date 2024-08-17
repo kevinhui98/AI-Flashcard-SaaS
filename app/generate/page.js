@@ -2,7 +2,6 @@
 
 import {useRouter} from "next/navigation"
 import {useUser} from '@clerk/nextjs'
-import { collection, writeBatch } from "firebase/firestore"
 import { Button, Container, Grid, Card, Box, Typography, Paper, TextField, CardActionArea, CardContent, Dialog, DialogActions, DialogContentText, DialogContent, DialogTitle} from "@mui/material"
 import { useState } from "react"
 import {db} from '@/firebase'
