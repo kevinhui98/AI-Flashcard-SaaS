@@ -43,11 +43,12 @@ const features = () => {
         }
     ]
     return (
-        <Box pb={10}>
-            <Typography variant="h1" letterSpacing={3} textAlign={'center'} mb={6} pt={10} fontFamily={"Montserrat"} color={'black'}>
+        <Box pb={10}
+            bgcolor={'#0F2A23'}>
+            <Typography variant="h1" letterSpacing={3} textAlign={'center'} mb={6} pt={10} color={'white'} fontWeight={'bold'}>
                 Features
             </Typography>
-            <Grid container spacing={8} px={3}>
+            <Grid container spacing={1} px={20}>
                 {features.map((feature, index) => (
                     <Grid item xs={12} md={4} key={index} textAlign={'center'} >
                         <Box
@@ -56,26 +57,28 @@ const features = () => {
                                 border: '3px solid',
                                 borderColor: 'grey.800',
                                 borderRadius: 2,
+                                bgcolor: '#2B6653',
                                 '&:hover': {
-                                    transform: 'scale(1.05)',
+                                    transform: 'scale(1.15)',
                                     transition: 'transform 0.2s',
-                                    bgcolor: '#56C556',
+                                    bgcolor: '#013B30',
+
                                 },
                             }}
-                            height={{ xs: '20vh', sm: '20vh', md: '40vh', lg: '25vh' }}
+                            height={{ xs: '25vh', sm: '25vh', md: '50vh', lg: '40vh' }}
                         >
-                            <Typography variant="h4" fontFamily={"Montserrat"} color={'black'}>{feature.title}</Typography>
-                            <Typography variant="h6" fontFamily={"Montserrat"} color={'gray'}>{feature.description}</Typography>
+                            <Typography variant="h4" color={'white'} fontWeight={'bold'} mb={2}>{feature.title}</Typography>
+                            <Typography variant="h6" color={'white'}>{feature.description}</Typography>
                         </Box>
                         <BorderBeam size={250} />
                     </Grid>
                 ))}
             </Grid>
-            <Typography variant="h4" letterSpacing={3} textAlign={'center'} mt={15} mb={6} fontFamily={"gotham"} color={'black'}>
+            <Typography variant="h3" letterSpacing={3} textAlign={'center'} mt={15} mb={6} color={'white'} fontWeight={'bold'}>
                 Future Features
             </Typography>
             <Grid container>
-                <Marquee pauseOnHover={true} autoFill={true} gradient={true} gradientWidth={80}>
+                <Marquee pauseOnHover={true} autoFill={true} gradient={true} gradientWidth={80} gradientColor={'#013B30'}>
                     {futureFeatures.map((feature, index) => (
                         <Grid item xs={12} md={4} key={index} width={{ sm: '50vw', md: '40vw', lg: '30vw' }} >
                             <Box
@@ -84,6 +87,7 @@ const features = () => {
                                     border: '3px solid',
                                     borderColor: 'grey.800',
                                     borderRadius: 2,
+                                    bgcolor: '#2B6653',
                                 }}
                                 textAlign={'center'}
                                 height={{ xs: '30vh', sm: '28vh', md: '26vh', lg: '25vh' }}
@@ -92,8 +96,8 @@ const features = () => {
                                 justifyContent={'center'}
                                 alignContent={'center'}
                                 minWidth={'28vw'}>
-                                <Typography variant="h4" fontFamily={"Montserrat"} color={'black'}>{feature.title}</Typography>
-                                <Typography variant="h6" fontFamily={"Montserrat"} color={'#b1b1b1'}>{feature.description}</Typography>
+                                <Typography variant="h4" color={'white'}>{feature.title}</Typography>
+                                <Typography variant="h6" color={'white'}>{feature.description}</Typography>
                             </Box>
                             <BorderBeam size={250} duration={12} delay={9} />
                         </Grid>

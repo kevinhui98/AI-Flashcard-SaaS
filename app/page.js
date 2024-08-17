@@ -20,7 +20,6 @@ export default function Home() {
       <Nav />
       <Welcome />
       <Feature />
-      <Divider variant="middle" />
       <Price />
       <Divider variant="middle" />
       <Contact />
