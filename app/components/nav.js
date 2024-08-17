@@ -24,17 +24,17 @@ export const Nav = () => {
         }
     ]
     return (
-        <AppBar position="sticky" sx={{ background: 'green' }} >
+        <AppBar position="sticky" sx={{ background: '#0F2A23' }} >
             <Toolbar>
                 <Grid container direction={'row'}>
-                    <Typography variant="h4" style={{ flexGrow: 1 }} fontFamily={"Montserrat"} color={'white'}>
+                    <Typography variant="h4" style={{ flexGrow: 1 }} color={'#B7EA95'}>
                         StockStarter
                     </Typography>
                     <Stack direction="row" spacing={2} style={{ flexGrow: 1 }}>
                         {navLinks.map((navLink, index) => (
                             <Button color="inherit" key={index} onClick={() => alert(`You are entering ${navLink.title} page`)} >
                                 <Link href={navLink.link} key={index} scroll={true} style={{ "textDecoration": "none", scrollBehavior: 'smooth', color: 'black' }}>
-                                    <Typography variant="h6" letterSpacing={1} fontFamily={"Montserrat"} color={'white'}>
+                                    <Typography variant="h6" letterSpacing={1} color={'#B7EA95'}>
                                         {navLink.title}
                                     </Typography>
                                 </Link>
@@ -43,7 +43,7 @@ export const Nav = () => {
                     </Stack>
                     <Box mt={0.5}>
                         <SignedOut>
-                            <Button variant="contained" sx={{ bgcolor: "white", color: 'black' }} fontFamily={"Montserrat"}>Login/Signup</Button>
+                            <Button variant="contained" sx={{ bgcolor: "#2B6653", color: 'white' }} >Login/Signup</Button>
                         </SignedOut>
                         <SignedIn><UserButton /></SignedIn>
                     </Box>

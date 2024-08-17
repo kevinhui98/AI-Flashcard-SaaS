@@ -24,7 +24,7 @@ const Email = () => {
     }
     return (
         <div className="contact-form">
-            <Typography variant='h4' letterSpacing={1.5} fontFamily={"Montserrat"}>Contact Us</Typography>
+            <Typography variant='h4' letterSpacing={1.5} fontFamily={"Narmi matiere, sans-serif"}>Contact Us</Typography>
             <Typography variant='subtitle1' mb={2.5} color={'#c6c6c6'} fontFamily={"Montserrat"}>Send us a message</Typography>
             <form ref={form} onSubmit={sendEmail} bgcolor={'white'}>
                 <Stack direction={'column'} gap={1}>
@@ -34,7 +34,7 @@ const Email = () => {
                     </Stack>
                     <TextField label='Subject' name='subject' required variant="outlined" color="success" focused />
                     <TextField label='Message' name='message' multiline rows={4} required variant="outlined" color="success" focused />
-                    <Button type='submit' variant='contained' sx={{ "bgcolor": "#008000" }} endIcon={<SendIcon />} fontFamily={"Montserrat"}>Send</Button>
+                    <Button type='submit' variant='contained' sx={{ "bgcolor": "#2B6653" }} endIcon={<SendIcon />} fontFamily={"Montserrat"}>Send</Button>
                 </Stack>
             </form>
         </div>
