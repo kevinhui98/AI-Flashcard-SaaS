@@ -13,7 +13,7 @@ const Email = () => {
                 (result) => {
                     alert('Message successfully sent!')
                     // window.location.reload(false)
-                    window.location.href = 'https://kevinhui98.github.io/'
+                    window.location.href = '/'
                     console.log(result)
                 },
                 (err) => {
