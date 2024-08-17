@@ -28,7 +28,7 @@ export const Nav = () => {
             <Toolbar>
                 <Grid container direction={'row'}>
                     <Typography variant="h4" style={{ flexGrow: 1 }} fontFamily={"Montserrat"} color={'white'}>
-                        Stock Starter
+                        StockStarter
                     </Typography>
                     <Stack direction="row" spacing={2} style={{ flexGrow: 1 }}>
                         {navLinks.map((navLink, index) => (

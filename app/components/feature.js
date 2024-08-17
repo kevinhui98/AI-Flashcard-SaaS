@@ -56,7 +56,14 @@ const features = () => {
                                 border: '3px solid',
                                 borderColor: 'grey.800',
                                 borderRadius: 2,
-                            }}>
+                                '&:hover': {
+                                    transform: 'scale(1.05)',
+                                    transition: 'transform 0.2s',
+                                    bgcolor: '#56C556',
+                                },
+                            }}
+                            height={{ xs: '20vh', sm: '20vh', md: '40vh', lg: '25vh' }}
+                        >
                             <Typography variant="h4" fontFamily={"Montserrat"} color={'black'}>{feature.title}</Typography>
                             <Typography variant="h6" fontFamily={"Montserrat"} color={'gray'}>{feature.description}</Typography>
                         </Box>
@@ -93,7 +100,7 @@ const features = () => {
                     ))}
                 </Marquee>
             </Grid>
-        </Box>
+        </Box >
     )
 }
 
