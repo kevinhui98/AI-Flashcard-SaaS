@@ -101,7 +101,7 @@ const Welcome = () => {
             </Modal>
             {/* <img src="/assets/images/stockmarket.png" alt="stockmarket" width={500} height={500} /> */}
             <Box style={transitionClass} >
-                <Typography variant="h1" fontWeight={'bold'} color={'white'} sx={{ WebkitTextStrokeWidth: '1px', WebkitTextStrokeColor: 'black' }} onClick> Welcome to StockStarter</Typography>
+                <Typography variant='h1' fontWeight={'bold'} color={'white'} sx={{ WebkitTextStrokeWidth: '1px', WebkitTextStrokeColor: 'black' }}> Welcome to StockStarter</Typography>
                 <Typography variant="h4" fontWeight={'bold'} sx={{ color: 'white' }} mb={10} >
                     The easiest way to learn about stocks, using flashcards
                 </Typography>

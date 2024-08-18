@@ -6,6 +6,23 @@ import Link from 'next/link';
 import Email from './email';
 
 const Contact = () => {
+    const navLinks = [
+        {
+            title: 'Home',
+            link: '/'
+        },
+        {
+            title: 'Features',
+            link: '#features'
+        },
+        {
+            title: 'Pricing',
+            link: '#pricing'
+        },
+        {
+            title: 'Contact',
+            link: '#contact'
+        }]
     const alerting = () => {
         alert('Go email us at Headstarteradkm@gmail.com')
     }
@@ -17,11 +34,17 @@ const Contact = () => {
                 <Typography variant='h4' letterSpacing={1.5} fontFamily={"Narmi matiere, sans-serif"}>Sitemap</Typography>
                 <Typography variant='subtitle1' mb={2.5} color={'#c6c6c6'} fontFamily={"Montserrat"}>All our pages</Typography>
                 <Divider orientation="horizontal" flexItem />
-                <br />
-                <Typography mt={2.5} mb={1} letterSpacing={1.5} sx={{ cursor: 'pointer' }} fontFamily={"Montserrat"}>Home</Typography>
+                <Stack direction={'column'} gap={1} mt={3.4}>
+                    {navLinks.map((navLink, index) => (
+                        <Link href={navLink.link} key={index} style={{ "textDecoration": "none", color: "#2B6653" }}>
+                            <Typography mt={0.1} mb={1} letterSpacing={1.5} fontFamily={"Montserrat"}>{navLink.title}</Typography>
+                        </Link>
+                    ))}
+                </Stack>
+                {/* <Typography mt={0.1} mb={1} letterSpacing={1.5} sx={{ cursor: 'pointer' }} fontFamily={"Montserrat"}>Home</Typography>
                 <Typography mt={0.1} mb={1} letterSpacing={1.5} sx={{ cursor: 'pointer' }} fontFamily={"Montserrat"}>Features</Typography>
                 <Typography mt={0.1} mb={1} letterSpacing={1.5} sx={{ cursor: 'pointer' }} fontFamily={"Montserrat"}>Pricing</Typography>
-                <Typography mt={0.1} mb={1} letterSpacing={1.5} sx={{ cursor: 'pointer' }} fontFamily={"Montserrat"}>Contact</Typography>
+                <Typography mt={0.1} mb={1} letterSpacing={1.5} sx={{ cursor: 'pointer' }} fontFamily={"Montserrat"}>Contact</Typography> */}
             </Stack>
             <Box display={'flex'} mt={1} alignItems={'flex-start'} flexDirection={'column'} spacingx={2}>
                 <Typography variant='h4' letterSpacing={1.5} fontFamily={"Narmi matiere, sans-serif"}>Contact Info</Typography>
