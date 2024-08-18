@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Stock Starter",
-  description: "Create flashcard from your text",
+  description: "Learn everything about stocks using flashcards",
 };
 
 export default function RootLayout({ children }) {

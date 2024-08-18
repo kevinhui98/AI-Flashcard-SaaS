@@ -29,7 +29,7 @@ const Contact = () => {
                 <Divider orientation="horizontal" variant="middle" flexItem />
                 <Stack direction={'column'} gap={4}>
                     <Typography onClick={alerting} mt={5} sx={{ cursor: 'pointer' }} fontFamily={"Montserrat"} variant='h6'> Email: Headstarteradkm@gmail.com</Typography>
-                    <Link href='https://github.com/kevinhui98/AI-Flashcard-SaaS' style={{ "textDecoration": "none", color: "#2B6653" }}>
+                    <Link href='https://github.com/dpatel12/AI-Flashcard-SaaS' style={{ "textDecoration": "none", color: "#2B6653" }}>
                         <Stack direction="row" spacing={2}>
                             <GitHubIcon />
                             <Typography fontFamily={"Montserrat"} variant='h6'>GitHub</Typography>

@@ -7,41 +7,46 @@ import '../globals.css'
 const features = () => {
     const features = [
         {
-            title: 'Easy text Input',
-            description: 'Simply input your text and let our software do the rest. Creating flashcards has never been'
+            title: 'Smooth Text Input',
+            description: 'Type in your financial topics, and watch as our AI transforms your input into organized flashcards tailored for stock market education'
         },
         {
-            title: 'Smart Flashcards',
-            description: 'Our AI intelligently breaks down your text into concise flashcards, perfect for studying'
+            title: 'Intelligent Flashcards',
+            description: 'Leverage our advanced AI, which meticulously analyzes your input on stock-related themes to generate clear and concise flashcards, making complex concepts accessible.'
         },
         {
-            title: 'Accessible Anywhere',
-            description: 'Study on the go, wherever you want'
+            title: 'Study Stocks Anywhere',
+            description: 'Access your stock-focused flashcards on any device, at any time. '
         },
 
     ]
     const futureFeatures = [
         {
             title: 'Customizable Flashcards',
-            description: 'Change the look of your flashcards'
+            description: 'Personalize your flashcards by adjusting their appearance to suit your learning style.'
         },
         {
             title: 'Flashcard Sharing',
-            description: 'Share your flashcards with friends'
+            description: 'Easily share your financial flashcards with peers or study groups to enhance collaborative learning.'
         },
         {
             title: 'Flashcard Export',
-            description: 'Export your flashcards to other platforms'
+            description: 'Export your flashcards seamlessly to compatible platforms, ensuring your study materials are always accessible.'
         },
         {
             title: 'Flashcard Import',
-            description: 'Import flashcards from other platforms'
+            description: 'Import flashcards from other platforms to enrich your collection and broaden your study resources.'
         },
         {
-            title: 'Index Funds',
-            description: 'Create flashcards for index funds'
+            title: 'Index Funds and More',
+            description: 'Effortlessly create detailed flashcards focused on index funds or other financial topics to deepen your understanding of investment strategies.'
+        },
+        {
+            title: 'Save Flashcards',
+            description: 'Keep your most useful or frequently accessed flashcards saved in your account for quick and easy retrieval.'
         }
     ]
+    
     return (
         <Box pb={10}
             bgcolor={'#0F2A23'}>
