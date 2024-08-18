@@ -3,6 +3,9 @@ import { React, useState, useEffect } from 'react'
 import { Box, Button, Typography, Modal, TextField, Divider, Grid, Stack } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close';
 import Image from 'next/image'
+import { db } from '@/firebase';
+import { addDoc, collection } from 'firebase/firestore';
+
 // import stockMartketImage from './assets/images/stockmarket.png'
 // import stockmarket from '../public/stockmarket.png'
 const Welcome = () => {
@@ -36,6 +39,24 @@ const Welcome = () => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+
+    const handleSubmit = async () => {
+        try {
+            await addDoc(collection(db, "waitlist"), {
+                name: name,
+                email: email
+            });
+            console.log("Document successfully written!");
+            handleClose(); // Close the modal upon successful submission
+            alert('Thank you for joining the waitlist!');
+        } catch (error) {
+            console.error("Error adding document: ", error);
+            alert('Failed to submit your information. Please try again.');
+        }
+    };
+
 
     return (
         <Box height={'100vh'} pt={20}
@@ -68,10 +89,10 @@ const Welcome = () => {
                         <CloseIcon onClick={handleClose} sx={{ cursor: 'pointer', '&:hover': { color: 'red' } }} />
                     </Stack>
                     <Stack direction={"column"} spacing={2} >
-                        <TextField id="outlined-basic" label="Name" variant="outlined" fullWidth />
-                        <TextField id="outlined-basic" label="Email" variant="outlined" fullWidth />
+                        <TextField id="outlined-basic" label="Name" variant="outlined" fullWidth value={name} onChange={(e) => setName(e.target.value)} />
+                        <TextField id="outlined-basic" label="Email" variant="outlined" fullWidth value={email} onChange={(e) => setEmail(e.target.value)} />
                         <Divider variant="middle" />
-                        <Button variant="contained" sx={{ mt: 2, "bgcolor": "#008000" }} size='large' fullWidth>submit</Button>
+                        <Button onClick={handleSubmit} variant="contained" sx={{ mt: 2, "bgcolor": "#008000" }} size='large' fullWidth>Submit</Button>
                     </Stack>
                 </Box>
             </Modal>
@@ -79,9 +100,9 @@ const Welcome = () => {
             <Box style={transitionClass}>
                 <Typography variant="h1" fontWeight={'bold'} color={'white'} sx={{ WebkitTextStrokeWidth: '1px', WebkitTextStrokeColor: 'black' }}> Welcome to StockStarter</Typography>
                 <Typography variant="h4" fontWeight={'bold'} sx={{ color: 'white' }} mb={10} >
-                    The easiest way to make flashcards for your stocks
+                    The easiest way to learn about Stocks with Flashcards
                 </Typography>
-                <Button variant="contained" sx={{ mt: 2, "bgcolor": "#2B6653" }} size='large' onClick={handleOpen}>join waitlist</Button>
+                <Button variant="contained" sx={{ mt: 2, "bgcolor": "#2B6653" }} size='large' onClick={handleOpen}>Join Waitlist Now</Button>
             </Box>
         </Box>
     )
