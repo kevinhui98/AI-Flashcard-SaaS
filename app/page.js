@@ -10,23 +10,24 @@ import Welcome from "./components/Welcome";
 import Price from "./components/price";
 export default function Home() {
 
-
-
-  const handleSubmit = async () => {
-    const checkoutSession = await fetch('/api/checkout_session', {
-      method: 'POST',
-      headers: {
-        origin: 'http://localhost:3000',
-      },
-    })
-  }
-
   
-  const checkoutSessionJson = await checkoutSession.json();
-  if (checkoutSession.status === 500) {
-    console.error(checkoutSessionJson.message);
-  }
-  
+
+
+  // const handleSubmit = async () => {
+  //   const checkoutSession = await fetch('/api/checkout_session', {
+  //     method: 'POST',
+  //     headers: {
+  //       origin: 'http://localhost:3000',
+  //     },
+  //   })
+  // }
+
+
+  // const checkoutSessionJson = await checkoutSession.json();
+  // if (checkoutSession.status === 500) {
+  //   console.error(checkoutSessionJson.message);
+  // }
+
   return (
     <Grid color={'transparent'}>
       <Head>
