@@ -1,8 +1,7 @@
 'use client'
 import {useUser} from '@clerk/nextjs'
 import {useEffect, useState} from 'react'
-
-
+import { Container } from '@mui/material';
 import {CollectionReference, doc, getdoc, setdoc} from 'firebase/firestore'
 import { db } from '@/firebase'
 import { useRouter } from 'next/navigation'
