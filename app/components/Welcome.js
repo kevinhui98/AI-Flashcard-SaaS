@@ -5,10 +5,10 @@ import CloseIcon from '@mui/icons-material/Close';
 import Image from 'next/image'
 import { db } from '@/firebase';
 import { addDoc, collection } from 'firebase/firestore';
+import { useRouter } from 'next/navigation';
 
-// import stockMartketImage from './assets/images/stockmarket.png'
-// import stockmarket from '../public/stockmarket.png'
 const Welcome = () => {
+    const router = useRouter();
     const [transitionClass, setTransitionClass] = useState({ transform: 'translateY(25%)' })
     useEffect(() => {
         setTimeout(() => {
@@ -41,8 +41,7 @@ const Welcome = () => {
     const handleClose = () => setOpen(false);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-
-    const handleSubmit = async () => {
+    const handleSubmit = async (name, email) => {
         try {
             await addDoc(collection(db, "waitlist"), {
                 name: name,
@@ -50,14 +49,13 @@ const Welcome = () => {
             });
             console.log("Document successfully written!");
             handleClose(); // Close the modal upon successful submission
-            alert('Thank you for joining the waitlist!');
+            alert("Thank you for joining the waitlist! We will notify you when the app is ready.");
+            router.push('/generate'); // Redirect to dashboard
+
         } catch (error) {
             console.error("Error adding document: ", error);
-            alert('Failed to submit your information. Please try again.');
         }
     };
-
-
     return (
         <Box height={'100vh'} pt={20}
             // style={{
@@ -92,12 +90,17 @@ const Welcome = () => {
                         <TextField id="outlined-basic" label="Name" variant="outlined" fullWidth value={name} onChange={(e) => setName(e.target.value)} />
                         <TextField id="outlined-basic" label="Email" variant="outlined" fullWidth value={email} onChange={(e) => setEmail(e.target.value)} />
                         <Divider variant="middle" />
-                        <Button onClick={handleSubmit} variant="contained" sx={{ mt: 2, "bgcolor": "#008000" }} size='large' fullWidth>Submit</Button>
+                        <Button onClick={() => {
+                            handleSubmit(name, email)
+                            setEmail('')
+                            setName('')
+                        }
+                        } variant="contained" sx={{ mt: 2, "bgcolor": "#008000" }} size='large' fullWidth>Submit</Button>
                     </Stack>
                 </Box>
             </Modal>
             {/* <img src="/assets/images/stockmarket.png" alt="stockmarket" width={500} height={500} /> */}
-            <Box style={transitionClass}>
+            <Box style={transitionClass} >
                 <Typography variant="h1" fontWeight={'bold'} color={'white'} sx={{ WebkitTextStrokeWidth: '1px', WebkitTextStrokeColor: 'black' }}> Welcome to StockStarter</Typography>
                 <Typography variant="h4" fontWeight={'bold'} sx={{ color: 'white' }} mb={10} >
                     The easiest way to learn about Stocks with Flashcards
