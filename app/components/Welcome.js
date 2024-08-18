@@ -87,8 +87,8 @@ const Welcome = () => {
                         <CloseIcon onClick={handleClose} sx={{ cursor: 'pointer', '&:hover': { color: 'red' } }} />
                     </Stack>
                     <Stack direction={"column"} spacing={2} >
-                        <TextField id="outlined-basic" label="Name" variant="outlined" fullWidth value={name} onChange={(e) => setName(e.target.value)} />
-                        <TextField id="outlined-basic" label="Email" variant="outlined" fullWidth value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <TextField id="outlined-basic" label="Name" variant="outlined" fullWidth value={name} onChange={(e) => setName(e.target.value)} required />
+                        <TextField id="outlined-basic" label="Email" variant="outlined" fullWidth value={email} onChange={(e) => setEmail(e.target.value)} required />
                         <Divider variant="middle" />
                         <Button onClick={() => {
                             handleSubmit(name, email)
@@ -101,7 +101,7 @@ const Welcome = () => {
             </Modal>
             {/* <img src="/assets/images/stockmarket.png" alt="stockmarket" width={500} height={500} /> */}
             <Box style={transitionClass} >
-                <Typography variant="h1" fontWeight={'bold'} color={'white'} sx={{ WebkitTextStrokeWidth: '1px', WebkitTextStrokeColor: 'black' }}> Welcome to StockStarter</Typography>
+                <Typography variant="h1" fontWeight={'bold'} color={'white'} sx={{ WebkitTextStrokeWidth: '1px', WebkitTextStrokeColor: 'black' }} onClick> Welcome to StockStarter</Typography>
                 <Typography variant="h4" fontWeight={'bold'} sx={{ color: 'white' }} mb={10} >
                     The easiest way to learn about stocks, using flashcards
                 </Typography>

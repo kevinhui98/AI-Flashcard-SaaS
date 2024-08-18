@@ -2,8 +2,6 @@ import React from 'react'
 import { Box, Grid, Typography, Container } from '@mui/material'
 import { BorderBeam } from "@/components/magicui/border-beam";
 import Marquee from "react-fast-marquee";
-//import globals css
-import '../globals.css'
 const features = () => {
     const features = [
         {
@@ -48,7 +46,7 @@ const features = () => {
     ]
     
     return (
-        <Box pb={10}
+        <Box pb={10} id={'features'}
             bgcolor={'#0F2A23'}>
             <Typography variant="h1" letterSpacing={3} textAlign={'center'} mb={6} pt={10} color={'white'} fontWeight={'bold'}>
                 Features

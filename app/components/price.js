@@ -30,7 +30,7 @@ const price = () => {
         }
     ]
     return (
-        <Box bgcolor={'white'}>
+        <Box bgcolor={'white'} id={'pricing'}>
             <Container sx={{ mb: 6, textAlign: 'center' }} py={20} >
                 <Typography variant="h2" letterSpacing={3} textAlign={'center'} color={'black'} fontWeight={'bold'} pt={10}> Pricing </Typography>
                 <Grid display={'flex'} px={3} py={10} justifyContent={'center'} alignItems={'center'} gap={1}>
