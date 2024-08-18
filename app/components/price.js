@@ -47,8 +47,8 @@ const price = () => {
                                     flexDirection: 'column',
                                     justifyContent: 'center',
                                     textAlign: 'center',
-                                    py: price.title === 'Basic' ? '90px' : '70px',
-                                    bgcolor: price.title === 'Basic' ? '#2B6653' : 'white',
+                                    py: price.title === 'Pro' ? '90px' : '70px',
+                                    bgcolor: price.title === 'Pro' ? '#2B6653' : 'white',
                                     '&:hover': {
                                         transform: 'scale(1.15)',
                                         transition: 'transform 0.2s ease-in-out',
@@ -56,13 +56,13 @@ const price = () => {
                                         color: 'white',
                                     },
                                 }}>
-                                <Typography variant="h4" fontWeight={'bold'} color={price.title === 'Basic' ? "white" : '#5A5A5A'} sx={{
+                                <Typography variant="h4" fontWeight={'bold'} color={price.title === 'Pro' ? "white" : '#5A5A5A'} sx={{
                                     '&:hover': {
                                         color: 'white'
                                     }
                                 }} mt={'-30px'}>{price.title}</Typography>
-                                <Typography variant="subtitle1" color={price.title === 'Basic' ? "white" : '#7E7E7E'}>{price.description}</Typography>
-                                <Typography variant="h6" color={price.title === 'Basic' ? "white" : 'gray'} mt={5}>{price.price}</Typography>
+                                <Typography variant="subtitle1" color={price.title === 'Pro' ? "white" : '#7E7E7E'}>{price.description}</Typography>
+                                <Typography variant="h6" color={price.title === 'Pro' ? "white" : 'gray'} mt={5}>{price.price}</Typography>
                                 {/* <Button variant="contained" fontFamily={"Montserrat"} sx={style} >Get Started</Button> */}
                                 <Button variant={'contained'} color={'success'}
                                     sx={{ mt: 2, color: 'white', }}>Get Started</Button>
