@@ -14,19 +14,19 @@ const price = () => {
     };
     const prices = [
         {
-            title: 'Intro',
+            title: 'Basic',
             price: 'Free',
             description: 'Access to basic flashcard features and limited storage'
         },
         {
-            title: 'Basic',
+            title: 'Pro',
             price: '$5 / month',
-            description: 'Access to basic flashcard features and limited storage'
+            description: 'Access to pro flashcard features and increased storage'
         },
         {
             title: 'Professional',
             price: '$10 / month',
-            description: 'Unlimited flashcards and storage with priority support.'
+            description: 'Unlimited flashcards and storage with priority support'
         }
     ]
     return (

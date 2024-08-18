@@ -50,7 +50,7 @@ const Welcome = () => {
             console.log("Document successfully written!");
             handleClose(); // Close the modal upon successful submission
             alert("Thank you for joining the waitlist! We will notify you when the app is ready.");
-            router.push('/generate'); // Redirect to dashboard
+            // router.push('/generate'); // Redirect to dashboard
 
         } catch (error) {
             console.error("Error adding document: ", error);
@@ -103,7 +103,7 @@ const Welcome = () => {
             <Box style={transitionClass} >
                 <Typography variant="h1" fontWeight={'bold'} color={'white'} sx={{ WebkitTextStrokeWidth: '1px', WebkitTextStrokeColor: 'black' }} onClick> Welcome to StockStarter</Typography>
                 <Typography variant="h4" fontWeight={'bold'} sx={{ color: 'white' }} mb={10} >
-                    The easiest way to learn about Stocks with Flashcards
+                    The easiest way to learn about stocks, using flashcards
                 </Typography>
                 <Button variant="contained" sx={{ mt: 2, "bgcolor": "#2B6653" }} size='large' onClick={handleOpen}>Join Waitlist Now</Button>
             </Box>
