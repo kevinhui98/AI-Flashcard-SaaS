@@ -11,7 +11,7 @@ const Contact = () => {
     }
     return (
         //create a footer component using material ui
-        <Stack direction={'row'} justifyContent={'center'} gap={16} pt={5} pb={2} color={'black'} bgcolor={'#F6F6F2'}>
+        <Stack id={'contact'} direction={'row'} justifyContent={'center'} gap={16} pt={5} pb={2} color={'black'} bgcolor={'#F6F6F2'}>
             <Email />
             <Stack direction={'column'} display={'flex'} mt={0.5}>
                 <Typography variant='h4' letterSpacing={1.5} fontFamily={"Narmi matiere, sans-serif"}>Sitemap</Typography>
