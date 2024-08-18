@@ -14,15 +14,15 @@ export const Nav = () => {
         },
         {
             title: 'Features',
-            link: '#features'
+            link: '/#features'
         },
         {
             title: 'Pricing',
-            link: '#pricing'
+            link: '/#pricing'
         },
         {
             title: 'Contact',
-            link: '#contact'
+            link: '/#contact'
         }
     ]
     return (
@@ -43,7 +43,7 @@ export const Nav = () => {
                     </Stack>
                     <Box mt={0.5}>
                         <SignedOut>
-                            <Button variant="contained" sx={{ bgcolor: "#2B6653", color: 'white' }} >Login/Signup</Button>
+                            <Button variant="contained" sx={{ bgcolor: "#2B6653", color: 'white' }} onClick={() => router.push('/sign-in')} >Login</Button>
                         </SignedOut>
                         <SignedIn><UserButton /></SignedIn>
                     </Box>
