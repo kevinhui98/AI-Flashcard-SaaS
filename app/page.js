@@ -4,6 +4,24 @@ import {Box, Button, Container, Toolbar, Typography, AppBar, Grid} from '@mui/ma
 import Head from 'next/head'
 
 export default function Home() {
+
+
+
+  const handleSubmit = async () => {
+    const checkoutSession = await fetch('/api/checkout_session', {
+      method: 'POST',
+      headers: {
+        origin: 'http://localhost:3000',
+      },
+    })
+  }
+
+  
+  const checkoutSessionJson = await checkoutSession.json();
+  if (checkoutSession.status === 500) {
+    console.error(checkoutSessionJson.message);
+  }
+  
   return (
     <Container maxWidth="100vw">
       <Head>
