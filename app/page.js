@@ -10,7 +10,7 @@ import Welcome from "./components/Welcome";
 import Price from "./components/price";
 export default function Home() {
 
-  
+
 
 
   // const handleSubmit = async () => {
@@ -42,7 +42,6 @@ export default function Home() {
       <Price />
       <Divider variant="middle" />
       <Contact />
-      <Copyright />
     </Grid>
   )
 }
