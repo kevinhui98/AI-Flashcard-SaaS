@@ -45,7 +45,12 @@ export const Nav = () => {
                         <SignedOut>
                             <Button variant="contained" sx={{ bgcolor: "#2B6653", color: 'white' }} onClick={() => router.push('/sign-in')} >Login</Button>
                         </SignedOut>
-                        <SignedIn><UserButton /></SignedIn>
+                        <SignedIn>
+                            <Stack direction={'row'} gap={3} >
+                                <Button variant="contained" sx={{ bgcolor: "#2B6653", color: 'white' }} onClick={() => router.push('/generate')} >Generate</Button>
+                                <UserButton />
+                            </Stack>
+                        </SignedIn>
                     </Box>
                 </Grid>
             </Toolbar>

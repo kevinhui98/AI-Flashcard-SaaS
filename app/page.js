@@ -4,7 +4,6 @@ import { Grid, Divider } from '@mui/material'
 import Head from 'next/head'
 import { Nav } from './components/nav'
 import Contact from './components/foot'
-import Copyright from "./components/copyright";
 import Feature from "./components/feature";
 import Welcome from "./components/Welcome";
 import Price from "./components/price";

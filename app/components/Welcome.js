@@ -56,26 +56,7 @@ const Welcome = () => {
             console.error("Error adding document: ", error);
         }
     };
-    // const theme = createTheme({
-    //     components: {
-    //         MuiTypography: {
-    //             defaultProps: {
-    //                 variantMapping: {
-    //                     h1: 'h2',
-    //                     h2: 'h2',
-    //                     h3: 'h2',
-    //                     h4: 'h2',
-    //                     h5: 'h2',
-    //                     h6: 'h2',
-    //                     subtitle1: 'h2',
-    //                     subtitle2: 'h2',
-    //                     body1: 'span',
-    //                     body2: 'span',
-    //                 },
-    //             },
-    //         },
-    //     },
-    // });
+
 
     return (
         <Box height={'100vh'} pt={20}
@@ -120,12 +101,12 @@ const Welcome = () => {
                     </Stack>
                 </Box>
             </Modal>
-            {/* <img src="/assets/images/stockmarket.png" alt="stockmarket" width={500} height={500} /> */}
             <Box style={transitionClass} >
                 <Typography variant='h1' fontWeight={'bold'} color={'white'} sx={{ WebkitTextStrokeWidth: '1px', WebkitTextStrokeColor: 'black' }}> Welcome to StockStarter</Typography>
-                <Typography variant="h4" fontWeight={'bold'} sx={{ color: 'white' }} mb={10} >
+                <Typography variant="h4" fontWeight={'bold'} sx={{ color: 'white' }} >
                     The easiest way to learn about stocks, using flashcards
                 </Typography>
+                <Typography variant="h5" fontWeight={'bold'} sx={{ color: 'white' }} mb={10} >Log-in to start generating</Typography>
                 <Button variant="contained" sx={{ mt: 2, "bgcolor": "#2B6653" }} size='large' onClick={handleOpen}>Join Waitlist Now</Button>
             </Box>
         </Box>
