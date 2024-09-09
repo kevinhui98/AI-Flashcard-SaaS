@@ -1,4 +1,4 @@
-# Headstarter Project3 - *AI-Chat Support*
+# Headstarter Project4 - *AI Flash cards*
 
 Submitted by: **Kevin,Danyaal,Manal,Affan**
 
